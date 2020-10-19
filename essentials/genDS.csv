@@ -1,0 +1,238 @@
+String,Trigger
+Turn on the lights,#LIGHTS_ON
+Switch on the light,#LIGHTS_ON
+Bring the lights on,#LIGHTS_ON
+Light up the room,#LIGHTS_ON
+Wake up light,#LIGHTS_ON
+Get the lights running,#LIGHTS_ON
+Turn the lights on,#LIGHTS_ON
+Switch the light on,#LIGHTS_ON
+Turn on the bulb,#LIGHTS_ON
+Light up the bulb,#LIGHTS_ON
+Turn the bulb on,#LIGHTS_ON
+Switch on the bulb,#LIGHTS_ON
+Bring in the lights,#LIGHTS_ON
+Bring the bulb on up,#LIGHTS_ON
+Lights in,#LIGHTS_ON
+Light up,#LIGHTS_ON
+Brighten up the room,#LIGHTS_ON
+Bulb on,#LIGHTS_ON
+Bulbs on,#LIGHTS_ON
+Put on the lights,#LIGHTS_ON
+Please switch on the lights,#LIGHTS_ON
+Switch on the lights,#LIGHTS_ON
+On the lights,#LIGHTS_ON
+Turn on the lights,#LIGHTS_ON
+Get the lights,#LIGHTS_ON
+Make it bright,#LIGHTS_ON
+Switch the lights on will you,#LIGHTS_ON
+Turn lights on,#LIGHTS_ON
+Lights on,#LIGHTS_ON
+Turn on the lights,#LIGHTS_ON
+Brighten the light to full,#LIGHTS_ON
+Lights,#LIGHTS_ON
+I want to wake up,#LIGHTS_ON
+I need to wake up,#LIGHTS_ON
+I desire to wake up,#LIGHTS_ON
+I must wake up now,#LIGHTS_ON
+I should wake up now,#LIGHTS_ON
+I would like to wake now,#LIGHTS_ON
+I fancy to wake up now,#LIGHTS_ON
+I need to rise now,#LIGHTS_ON
+Enough sleep for today,#LIGHTS_ON
+It is work time now,#LIGHTS_ON
+It is time to get up,#LIGHTS_ON
+Shut on the lights,#LIGHTS_ON
+Put up the lights,#LIGHTS_ON
+Plug on the lights,#LIGHTS_ON
+Turn on the lights,#LIGHTS_ON
+Light up the room,#LIGHTS_ON
+Brighten the room,#LIGHTS_ON
+Activate the lightings,#LIGHTS_ON
+Illuminate the room,#LIGHTS_ON
+Turn on the lights,#LIGHTS_ON
+start lights,#LIGHTS_ON
+on light,#LIGHTS_ON
+Turn off the lights,#LIGHTS_OFF
+Switch off the light,#LIGHTS_OFF
+Bring down the lights,#LIGHTS_OFF
+Darken up the room,#LIGHTS_OFF
+I want to sleep,#LIGHTS_OFF
+Get the lights switched off,#LIGHTS_OFF
+Turn the lights off,#LIGHTS_OFF
+Switch the light off,#LIGHTS_OFF
+Turn off the bulb,#LIGHTS_OFF
+Dim the room,#LIGHTS_OFF
+Turn the bulb off,#LIGHTS_OFF
+Switch off the bulb,#LIGHTS_OFF
+Bring up the darkness,#LIGHTS_OFF
+Dark and darken,#LIGHTS_OFF
+Black out,#LIGHTS_OFF
+Lights out,#LIGHTS_OFF
+Bulbs off,#LIGHTS_OFF
+Lights off,#LIGHTS_OFF
+Light off,#LIGHTS_OFF
+Bulb off,#LIGHTS_OFF
+Please switch off the lights,#LIGHTS_OFF
+Switch off the lights,#LIGHTS_OFF
+Off the lights,#LIGHTS_OFF
+Put off the lights,#LIGHTS_OFF
+Turn off the lights,#LIGHTS_OFF
+Dim the lights,#LIGHTS_OFF
+Turn off the lights,#LIGHTS_OFF
+Turn lights off,#LIGHTS_OFF
+Lights off,#LIGHTS_OFF
+Turn off the lights,#LIGHTS_OFF
+Dim the light to zero,#LIGHTS_OFF
+Turn off lights,#LIGHTS_OFF
+I want to sleep,#LIGHTS_OFF
+I need to sleep,#LIGHTS_OFF
+I desire to sleep,#LIGHTS_OFF
+I must sleep now,#LIGHTS_OFF
+I should sleep now,#LIGHTS_OFF
+I would like to sleep now,#LIGHTS_OFF
+I fancy sleeping now,#LIGHTS_OFF
+I need some rest,#LIGHTS_OFF
+I need a nap,#LIGHTS_OFF
+I need to doze off,#LIGHTS_OFF
+I need a power nap,#LIGHTS_OFF
+Shut off the lights,#LIGHTS_OFF
+Put down the lights,#LIGHTS_OFF
+Unplug the light,#LIGHTS_OFF
+Turn out the light,#LIGHTS_OFF
+Turn on the fan,#FAN_ON
+Switch on the fan,#FAN_ON
+Spin the fan,#FAN_ON
+Start the fan,#FAN_ON
+I want some wind,#FAN_ON
+Get in some air,#FAN_ON
+Im feeling sweaty,#FAN_ON
+"Im feeling hot, give me some breeze",#FAN_ON
+Please switch on the fan,#FAN_ON
+Switch on the fan,#FAN_ON
+On the fan,#FAN_ON
+Turn on the fan,#FAN_ON
+Get the fan,#FAN_ON
+Blow some wind,#FAN_ON
+Fan on please,#FAN_ON
+Turn fan on,#FAN_ON
+Fan on,#FAN_ON
+Turn on the fan,#FAN_ON
+Start the supply of electricity to fan,#FAN_ON
+Fan,#FAN_ON
+Shut on the fan,#FAN_ON
+Put up the fan,#FAN_ON
+Plug on the fan,#FAN_ON
+Turn on the fan,#FAN_ON
+I am feeling hot here,#FAN_ON
+I need some cool air,#FAN_ON
+Activate the fan,#FAN_ON
+Start the fan,#FAN_ON
+Cooldown the room,#FAN_ON
+I want some air,#FAN_ON
+Turn off the fan,#FAN_OFF
+Stop the fan,#FAN_OFF
+Turn the fan off,#FAN_OFF
+Switch off the fan,#FAN_OFF
+Im feeling cold,#FAN_OFF
+Switch off the fan,#FAN_OFF
+Please switch off the fan,#FAN_OFF
+Switch off the fan,#FAN_OFF
+Off the fan,#FAN_OFF
+Put off the fan,#FAN_OFF
+Turn off the fan,#FAN_OFF
+Fans out,#FAN_OFF
+Shut off the fan,#FAN_OFF
+Turn fan off,#FAN_OFF
+Fan off,#FAN_OFF
+Turn off the fan,#FAN_OFF
+Stop supplying electricity to fan,#FAN_OFF
+Turn off fan,#FAN_OFF
+Shut down the fan,#FAN_OFF
+Put down the fan,#FAN_OFF
+Plug off the fan,#FAN_OFF
+Turn off the fan,#FAN_OFF
+I am feeling cold here,#FAN_OFF
+I need some hotness,#FAN_OFF
+Deactivate the fan,#FAN_OFF
+Stop the fan,#FAN_OFF
+Let the room get warm,#FAN_OFF
+Switch off the fan,#FAN_OFF
+Open the door,#DOOR_OPEN
+Push the door back,#DOOR_OPEN
+Unlock the door,#DOOR_OPEN
+Let them inside,#DOOR_OPEN
+Open the door,#DOOR_OPEN
+Let the person outside the door come inside,#DOOR_OPEN
+Unlock the door,#DOOR_OPEN
+See who is outside,#DOOR_OPEN
+I want to go out,#DOOR_OPEN
+My friend is at the door,#DOOR_OPEN
+Someone known is outside the door,#DOOR_OPEN
+Let the dog come inside,#DOOR_OPEN
+Close the door,#DOOR_CLOSE
+Lock the door,#DOOR_CLOSE
+Push the door front,#DOOR_CLOSE
+Secure the grid,#DOOR_CLOSE
+Shut the door,#DOOR_CLOSE
+close the door,#DOOR_CLOSE
+Let the person outside the door come inside,#DOOR_CLOSE
+lock the door,#DOOR_CLOSE
+Do not let anyone in,#DOOR_CLOSE
+Do not let the dog go outside,#DOOR_CLOSE
+Pull off the curtains,#CURTAINS_OPEN
+Open the curtains,#CURTAINS_OPEN
+Remove the curtains,#CURTAINS_OPEN
+Curtains out,#CURTAINS_OPEN
+Fold the curtains,#CURTAINS_OPEN
+Roll the curtains,#CURTAINS_OPEN
+Please open the curtains,#CURTAINS_OPEN
+Open the blinds,#CURTAINS_OPEN
+Bring in sunlight,#CURTAINS_OPEN
+Let some sunlight in,#CURTAINS_OPEN
+Curtains off,#CURTAINS_OPEN
+Show some view,#CURTAINS_OPEN
+Open curtains,#CURTAINS_OPEN
+open curtain,#CURTAINS_OPEN
+Curtains open,#CURTAINS_OPEN
+Open the curtains,#CURTAINS_OPEN
+Turn on the curtain,#CURTAINS_OPEN
+Need some sunlight,#CURTAINS_OPEN
+I need some outside light,#CURTAINS_OPEN
+I want to see the sunrise,#CURTAINS_OPEN
+I want to see the sunset,#CURTAINS_OPEN
+Open the curtains,#CURTAINS_OPEN
+Unfurl the curtains,#CURTAINS_OPEN
+Unroll the curtains,#CURTAINS_OPEN
+Wide open the curtains,#CURTAINS_OPEN
+Let the sun rays come inside,#CURTAINS_OPEN
+Let the natural light come in the room,#CURTAINS_OPEN
+Let the natural light brighten the room,#CURTAINS_OPEN
+I want some natural light,#CURTAINS_OPEN
+I want to take some fresh air,#CURTAINS_OPEN
+Show me the view outside,#CURTAINS_OPEN
+Show me the outside view,#CURTAINS_OPEN
+Close the curtains,#CURTAINS_CLOSE
+Draw the curtains,#CURTAINS_CLOSE
+Curtains down,#CURTAINS_CLOSE
+Curtains in,#CURTAINS_CLOSE
+Please close the curtains,#CURTAINS_CLOSE
+Close the blinds,#CURTAINS_CLOSE
+Block the sunlight,#CURTAINS_CLOSE
+Curtains on,#CURTAINS_CLOSE
+Get the curtains,#CURTAINS_CLOSE
+Block the sun,#CURTAINS_CLOSE
+Close curtains,#CURTAINS_CLOSE
+close curtain,#CURTAINS_CLOSE
+Curtains close,#CURTAINS_CLOSE
+close the curtains,#CURTAINS_CLOSE
+Turn off the curtain,#CURTAINS_CLOSE
+Sleeping time,#CURTAINS_CLOSE
+Close the curtains,#CURTAINS_CLOSE
+It is too sunny outside,#CURTAINS_CLOSE
+It is too bright outside,#CURTAINS_CLOSE
+Too many mosquitoes in the room,#CURTAINS_CLOSE
+I want curtains down.,#CURTAINS_CLOSE
+I do not want to see the outside view,#CURTAINS_CLOSE
+Roll down the curtains,#CURTAINS_CLOSE
+I need only inside light,#CURTAINS_CLOSE
