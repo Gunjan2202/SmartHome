@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href='../static/css/style1Copy.css' rel='stylesheet' type="text/css">
+    <link rel="stylesheet" href="../static/css/styleCopy.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+function open_curtain()
+{
+ $("#curtain1").animate({width:20},1000);
+ $("#curtain2").animate({width:20},1000);
+}
+function close_curtain()
+{
+ $("#curtain1").animate({width:300},1000);
+ $("#curtain2").animate({width:300},1000);
+}
+function myFunction() 
+{
+  var element = document.getElementById("door1");
+  element.classList.toggle("clay");
+}
+// $(".audiobtn").click(function()
+// {
+//   $(".cbody").fadeOut(1000);
+//   $(".bhide").css('opacity', '1');
+// })
+$(document).ready(function(){
+  $(".audiobtn").click(function(){
+    $(".cbody").fadeOut(1500);
+    $(".bhide").css('opacity', '1');
+    
+  });
+});
+</script>
+<style>
+    html,
+body {
+    height: 100%;
+}
+div.wall {
+    position: relative;
+    height: 500%;
+    left: -113px;
+    background-color: #000000;
+    top:-180px;
+}
+div.threshold {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -133px;
+    width: 200px;
+    height:500px;
+    z-index: 1000;
+    background-image: url("../static/img/door2.jpg"); 
+    background-size: cover;
+}
+div.door {
+    width:245px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #8b4f39;
+    background-image: url("../static/img/door1.jpg");
+    background-repeat: no-repeat;
+      background-size: cover;
+    height: 500px;
+    -webkit-transform-style: preserve-3d;
+    -webkit-perspective: 550px;
+    -webkit-transform-origin: 0 50%;
+    -webkit-transition: all 1s;
+    -moz-transform-style: preserve-3d;
+    -moz-perspective: 550px;
+    -moz-transform-origin: 0 50%;
+    -moz-transition: all 1s;
+    -o-transform-style: preserve-3d;
+    -o-perspective: 550px;
+    -o-transform-origin: 0 50%;
+    -o-transition: all 1s;
+    transform-style: preserve-3d;
+    perspective: 550px;
+    transform-origin: 0 50%;
+    transition: all 1s;
+}
+.clay {
+    -webkit-transform: scale(0.05,1) skew(0deg,20deg); /*use scale to change how wide it opens*/
+    -moz-transform: scale(0.05,1) skew(0deg,20deg);
+    -o-transform: scale(0.05,1) skew(0deg,20deg);
+    transform: scale(0.05,1) skew(0deg,20deg);
+}
+
+.doo
+    {
+        position: relative;
+        left: -70px;
+        top:260px;
+        z-index: 400;
+  height: 50px;
+  width: 100px;
+  display: block;
+  text-align: center;
+  line-height: 48px;
+  background:black;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  cursor: pointer;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+    }
+</style>
+</head>
+
+  <body>
+     <div class="cbody">
+    <div class="command p-5">
+         <div class="login">
+          <h1>Enter a Valid command</h1>
+
+             <!-- Main Input For Receiving Query to our ML -->
+            <form action="{{ url_for('predict')}}"method="post" class="p-5">
+            <input type="text" name="experience" placeholder="Eg: switch off the light" required="required" />
+            <!-- <input type="text" name="test_score" placeholder="Test Score" required="required" />
+            <input type="text" name="interview_score" placeholder="Interview Score" required="required" /> -->
+            <button type="submit" class=" btn-primary btn-large">Proceed</button>
+            </form>
+
+           <br>
+           <br>
+           {{ prediction_text }}
+
+         </div>
+      </div>
+    </div>
+    
+    <div class="wrapper bhide">
+      <input type="checkbox" id="btn">
+      <img class="im1" id="bulb-off" src="../static/img/bulb-off.png">
+      <img class="im1" id="bulb-on" src="../static/img/bulb-on.png">
+      <label for="btn" class="btn">
+        <span></span>
+      </label>
+    </div>
+      <div class="windows bhide">
+			<div class="window"></div>
+			<div class="window"></div>
+			<div class="window"></div>
+			<div class="window"></div>
+			<div class="window"></div>
+			<div class="window"></div>
+			<div class="window"></div>
+			<div class="window"></div>
+			<div class="window"></div>
+			<div class="window"></div>
+		</div>
+
+		<div class="fan bhide">
+			<div class="fan__root">
+				<span class="top">
+					<label class="red" for="engine"></label>
+					<label class="green" for="engine2"></label>
+					<label class="blue" for="jack"></label>
+				</span>
+				<span class="bottom"></span>
+			</div>
+      
+			<div class="fan__staddle"></div>
+			<input type="checkbox" id="jack" hidden />
+			<div class="head">
+				<div class="fan__engine">
+					<span class="center"></span>
+				</div>
+				<input type="checkbox" id="engine" hidden checked />
+				<div>
+					<span class="fly"></span>
+					<span class="fly"></span>
+					<span class="fly"></span>
+					<div class="fan__blades">
+						<input type="checkbox" id="engine2" hidden checked />
+						<div class="fan__blades">
+							<div class="center"></div>
+							<div class="blade"><span></span></div>
+							<div class="blade"><span></span></div>
+							<div class="blade"><span></span></div>
+							<div class="blade"><span></span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  <div id="wrapper" class="bhide">
+
+<div id="effect">
+ <h1>Hello</h1>
+ <img src="../static/img/curtain.png" id="curtain1">
+ <img src="../static/img/curtain.png" id="curtain2">
+</div>
+
+<div id="curtain_buttons">
+ <input type="button" value="OPEN CURTAIN" onclick="open_curtain();">
+ <input type="button" value="CLOSE CURTAIN" onclick="close_curtain();">
+</div>
+</div>
+<button class=" doo bhide" onclick="myFunction()">Door</button>
+<button class="doo audiobtn"><a href="/">Audio</a></button>
+<div class="wall bhide">
+    <div class="threshold">
+        <div class="door" id="door1">   
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+

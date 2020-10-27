@@ -101,7 +101,7 @@ body{
 }
 .bhide
 {
-  opacity: 1;
+  opacity: 0.1;
 }
 html {
      overflow: hidden;
@@ -543,10 +543,10 @@ html {
 #wrapper
 {
  text-align:center;
- margin:0 -92px;
+ margin:0 auto;
  padding:0px;
  z-index: 150;
- margin-top: -498px;
+ margin-top: -450px;
  margin-left: 20px;
  width:995px;
 }
@@ -556,17 +556,17 @@ html {
  width:60%;
  height:280px;
  margin:auto;
- margin-left: 17px;
+ margin-left: 25px;
  box-shadow:0px 0px 6px 2px #003B83;
- /*margin-top:100px;*/
+ margin-top:100px;
  background:#FFF;
  left: -200px;
 }
 #effect h1
 {
- line-height:1.5em;
- padding-top:20%;
- font-size:39px;
+ line-height:5.5em;
+ margin:auto;
+ font-size:50px;
  color:#525252;
 }
 #curtain1
@@ -574,13 +574,13 @@ html {
  top:0px;
  position:absolute;
  left:0px;
- height:315px;
+ height:294px;
 }
 #curtain2
 {
  top:0px;
  position:absolute;
- height:315px;
+ height:294px;
  right:0px;
 }
 #curtain_buttons input[type="button"]

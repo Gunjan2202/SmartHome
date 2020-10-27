@@ -15,7 +15,7 @@
 #DOWNLOAD MODEL
 from CyAdmin import *
 
-brain=models.load_model('deathblow.h5')
+# brain=models.load_model('deathblow.h5')
 weights=weightloader()
 print("taskbrain is locked; weights are loaded and Ready")
 

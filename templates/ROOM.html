@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>CyHome</title>
+    <meta charset="utf-8">
+    <link href='../static/css/style1.css' rel='stylesheet' type="text/css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+function open_curtain()
+{
+ $("#curtain1").animate({width:20},1000);
+ $("#curtain2").animate({width:20},1000);
+}
+function close_curtain()
+{
+ $("#curtain1").animate({width:300},1000);
+ $("#curtain2").animate({width:300},1000);
+}
+function dooropen() 
+{
+  var element = document.getElementById("door1");
+  element.classList.add("clay");
+}
+function doorclose() 
+{
+  var element = document.getElementById("door1");
+  element.classList.remove("clay");
+}
+
+// function turnOnOff()
+// {
+//      var image = document.getElementById('Image'); 
+//      if (image.src.match("../static/img/bulb-on.png")) 
+//     {
+//          image.src = "../static/img/bulb-off.png"; 
+//     }
+//      else
+//     {
+//          image.src = "../static/img/bulb-on.png"; 
+//     }
+// }
+
+function lighton()
+{
+     var image = document.getElementById('Image'); 
+     
+         image.src = "../static/img/bulb-on.png"; 
+}
+function lightoff()
+{
+     var image = document.getElementById('Image'); 
+     
+         image.src = "../static/img/bulb-off.png"; 
+}
+function fanon()
+{
+    var fanonn=document.getElementById('engine');
+    fanonn.checked=false;
+}
+function fanoff()
+{
+    var fanonn=document.getElementById('engine');
+    fanonn.checked=true;
+}
+
+
+
+// $(".audiobtn").click(function()
+// {
+//   $(".cbody").fadeIn(1000);
+//   $(".bhide").css('opacity', '0.1');
+// })
+// $(document).ready(function(){
+//   $(".audiobtn").click(function(){
+//     $(".cbody").fadeIn(1500);
+//     $(".bhide").css('opacity', '0.1');
+    
+//   });
+// });
+
+//////////////////////////////////////////////////////////
+
+// var taskvar=0;
+// var image= document.getElementById('Image');;
+// taskvar='{{ prediction_text }}';
+// if(taskvar==0)
+// {
+  
+//   image.src = "../static/img/bulb-on.png"; 
+
+// }
+// else if(taskvar==1)
+// {
+   
+//     image.src = "../static/img/bulb-off.png"; 
+// }
+// else if(taskvar==2)
+// {
+
+// }
+// else if(taskvar==3)
+// {
+
+// }
+// else if(taskvar==4)
+// {
+//     dooropen();
+// }
+// else if(taskvar==5)
+// {
+//     doorclose();
+// }
+// else if(taskvar==6)
+// {
+//   open_curtain();
+// }
+// else if(taskvar==7)
+// {
+//   close_curtain();
+// }
+
+</script>
+<style>
+    html,
+body {
+    height: 100%;
+}
+div.wall {
+    position: relative;
+    height: 500%;
+    left: -113px;
+    background-color: #000000;
+    top:-180px;
+}
+div.threshold {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -133px;
+    width: 246px;
+    height:500px;
+    z-index: 1000;
+    background-image: url("../static/img/door2.jpg"); 
+    background-size: cover;
+}
+div.door {
+    width:246px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #8b4f39;
+    background-image: url("../static/img/door1.jpg");
+    background-repeat: no-repeat;
+      background-size: cover;
+    height: 500px;
+    -webkit-transform-style: preserve-3d;
+    -webkit-perspective: 550px;
+    -webkit-transform-origin: 0 50%;
+    -webkit-transition: all 1s;
+    -moz-transform-style: preserve-3d;
+    -moz-perspective: 550px;
+    -moz-transform-origin: 0 50%;
+    -moz-transition: all 1s;
+    -o-transform-style: preserve-3d;
+    -o-perspective: 550px;
+    -o-transform-origin: 0 50%;
+    -o-transition: all 1s;
+    transform-style: preserve-3d;
+    perspective: 550px;
+    transform-origin: 0 50%;
+    transition: all 1s;
+}
+.clay {
+    -webkit-transform: scale(0.05,1) skew(0deg,20deg); /*use scale to change how wide it opens*/
+    -moz-transform: scale(0.05,1) skew(0deg,20deg);
+    -o-transform: scale(0.05,1) skew(0deg,20deg);
+    transform: scale(0.05,1) skew(0deg,20deg);
+}
+
+.doo
+    {
+        position: relative;
+        right:45%;
+        top:260px;
+        z-index: 400;
+  height: 50px;
+  width: 100px;
+  display: block;
+  text-align: center;
+  line-height: 48px;
+  background:black;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  cursor: pointer;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+    }
+</style>
+</head>
+
+  <body>
+     <div class="cbody">
+    <div class="command p-5">
+         <div class="login">
+          <h1>Enter a Valid command</h1>
+
+             <!-- Main Input For Receiving Query to our ML -->
+            <form action="{{ url_for('predict')}}"method="post" class="p-5">
+            <input type="text" name="experience" placeholder="Eg: switch off the light" required="required" />
+            <!-- <input type="text" name="test_score" placeholder="Test Score" required="required" />
+            <input type="text" name="interview_score" placeholder="Interview Score" required="required" /> -->
+            <button type="submit" class=" btn-primary btn-large">Proceed</button>
+            </form>
+
+           <br>
+           <br>
+           {{ prediction_text }}
+
+         </div>
+      </div>
+    </div>
+    
+    <div class="wrapper bhide">
+      <input type="checkbox" id="btn">
+      <img id="Image" class="im1" id="bulb-off" src="../static/img/bulb-off.png">
+      <!-- <img class="im1" id="bulb-on" src="../static/img/bulb-on.png"> -->
+
+     <!--  <label for="btn" class="btn">
+        <span></span>
+      </label> -->
+    </div>
+      <div class="windows bhide">
+			<div class="window"></div>
+			<div class="window"></div>
+			<div class="window"></div>
+			<div class="window"></div>
+			<div class="window"></div>
+			<div class="window"></div>
+			<div class="window"></div>
+			<div class="window"></div>
+			<div class="window"></div>
+			<div class="window"></div>
+		</div>
+
+		<div class="fan bhide">
+			<div class="fan__root">
+				<span class="top">
+					<label class="red" for="engine"></label>
+					<label class="green" for="engine2"></label>
+					<label class="blue" for="jack"></label>
+				</span>
+				<span class="bottom"></span>
+			</div>
+      
+			<div class="fan__staddle"></div>
+			<input type="checkbox" id="jack" hidden />
+			<div class="head">
+				<div class="fan__engine">
+					<span class="center"></span>
+				</div>
+				<input type="checkbox" id="engine" hidden checked />
+				<div>
+					<span class="fly"></span>
+					<span class="fly"></span>
+					<span class="fly"></span>
+					<div class="fan__blades">
+						<input type="checkbox" id="engine2" hidden checked />
+						<div class="fan__blades">
+							<div class="center"></div>
+							<div class="blade"><span></span></div>
+							<div class="blade"><span></span></div>
+							<div class="blade"><span></span></div>
+							<div class="blade"><span></span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  <div id="wrapper" class="bhide">
+
+<div id="effect">
+ <h1>Welcome to CyHome</h1>
+ <img src="../static/img/curtain.png" id="curtain1">
+ <img src="../static/img/curtain.png" id="curtain2">
+</div>
+
+<!-- <div id="curtain_buttons">
+ <input type="button" value="OPEN CURTAIN" onclick="open_curtain();">
+ <input type="button" value="CLOSE CURTAIN" onclick="close_curtain();">
+</div> -->
+</div>
+<!-- <button class=" doo bhide" onclick="myFunction()">Stop</button> -->
+
+<button id="recordButton" class="doo audiobtn">START</button>
+<button id="stopButton" class=" doo bhide" disabled>Stop</button>
+<button id="unrecordButton" class="doo audiobtn">Un_START</button>
+<button id="unstopButton" class=" doo bhide" disabled>Un_Stop</button>
+
+<!--  <button id="recordButton">Record</button>
+<button id="stopButton" disabled>Stop</button> -->
+<div class="wall bhide">
+    <div class="threshold">
+        <div class="door" id="door1">   
+        </div>
+    </div>
+</div>
+ <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js">
+  
+  </script>
+    <script>
+  //webkitURL is deprecated but nevertheless
+URL = window.URL || window.webkitURL;
+
+var gumStream;                      //stream from getUserMedia()
+var rec;                            //Recorder.js object
+var input;                          //MediaStreamAudioSourceNode we'll be recording
+
+// shim for AudioContext when it's not avb. 
+var AudioContext = window.AudioContext || window.webkitAudioContext;
+var audioContext //audio context to help us record
+
+var recordButton = document.getElementById("recordButton");
+var stopButton = document.getElementById("stopButton");
+
+var unrecordButton = document.getElementById("unrecordButton");
+var unstopButton = document.getElementById("unstopButton");
+
+//add events to those 2 buttons
+recordButton.addEventListener("click", startRecording);
+stopButton.addEventListener("click", stopRecording);
+
+unrecordButton.addEventListener("click", startRecording);
+unstopButton.addEventListener("click", unstopRecording);
+
+function startRecording() {
+    console.log("recordButton clicked");
+
+    /*
+        Simple constraints object, for more advanced audio features see
+        https://addpipe.com/blog/audio-constraints-getusermedia/
+    */
+
+    var constraints = { audio: true, video:false }
+
+    /*
+        Disable the record button until we get a success or fail from getUserMedia() 
+    */
+
+    recordButton.disabled = true;
+    stopButton.disabled = false;
+
+    /*
+        We're using the standard promise based getUserMedia() 
+        https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
+    */
+
+    navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
+        console.log("getUserMedia() success, stream created, initializing Recorder.js ...");
+
+        /*
+            create an audio context after getUserMedia is called
+            sampleRate might change after getUserMedia is called, like it does on macOS when recording through AirPods
+            the sampleRate defaults to the one set in your OS for your playback device
+
+        */
+        audioContext = new AudioContext();
+
+
+        /*  assign to gumStream for later use  */
+        gumStream = stream;
+
+        /* use the stream */
+        input = audioContext.createMediaStreamSource(stream);
+
+        /* 
+            Create the Recorder object and configure to record mono sound (1 channel)
+            Recording 2 channels  will double the file size
+        */
+        rec = new Recorder(input,{numChannels:1})
+
+        //start the recording process
+        rec.record()
+
+        console.log("Recording started");
+
+    }).catch(function(err) {
+        //enable the record button if getUserMedia() fails
+        recordButton.disabled = false;
+        stopButton.disabled = true;
+    });
+}
+
+function stopRecording() {
+    console.log("stopButton clicked");
+
+    //disable the stop button, enable the record too allow for new recordings
+    stopButton.disabled = true;
+    recordButton.disabled = false;
+
+    //reset button just in case the recording is stopped while paused
+  
+
+    //tell the recorder to stop the recording
+    rec.stop();
+
+    //stop microphone access
+    gumStream.getAudioTracks()[0].stop();
+
+    //create the wav blob and pass it on to createDownloadLink
+    rec.exportWAV(createDownloadLink);
+}
+
+function unstopRecording() {
+    console.log("stopButton clicked");
+
+    //disable the stop button, enable the record too allow for new recordings
+    stopButton.disabled = true;
+    recordButton.disabled = false;
+
+    //reset button just in case the recording is stopped while paused
+  
+
+    //tell the recorder to stop the recording
+    rec.stop();
+
+    //stop microphone access
+    gumStream.getAudioTracks()[0].stop();
+
+    //create the wav blob and pass it on to createDownloadLink
+    rec.exportWAV(createDownloadLink2);
+}
+
+function createDownloadLink(blob) {
+
+          var xhr=new XMLHttpRequest();
+          xhr.onload=function(e) {
+              if(this.readyState === 4) {
+                  switch(e.target.responseText[0])
+                  {
+                    case '0': 
+                      lighton();
+                      break;
+                    case '1': 
+                      lightoff();
+                      break;
+                    case '2':
+                      fanon();
+                      break;
+                    case '3':
+                      fanoff();
+                      break;
+                    case '4':
+                      dooropen();
+                      break;
+                    case '5':
+                      doorclose();
+                      break;
+                    case '6':
+                      open_curtain();
+                      break;
+                    case '7':
+                      close_curtain();
+                      break;
+                    default:
+                      lighton();
+                      break;
+                  }
+                  console.log(e.target.responseText[0]-48);
+                  console.log(e.target.responseText[0]);
+                  console.log("Server returned: ");
+              }
+          };
+          var fd=new FormData();
+          fd.append("audio_data",blob, 'audi');
+          xhr.open("POST","http://127.0.0.1:5000/predict",true);
+          xhr.send(fd);
+    
+
+}
+
+//for unencrypted text
+function createDownloadLink2(blob) {
+
+          var xhr=new XMLHttpRequest();
+          xhr.onload=function(e) {
+              if(this.readyState === 4) {
+                  switch(e.target.responseText[0])
+                  {
+                    case '0': 
+                      lighton();
+                      break;
+                    case '1': 
+                      lightoff();
+                      break;
+                    case '2':
+                      fanon();
+                      break;
+                    case '3':
+                      fanoff();
+                      break;
+                    case '4':
+                      dooropen();
+                      break;
+                    case '5':
+                      doorclose();
+                      break;
+                    case '6':
+                      open_curtain();
+                      break;
+                    case '7':
+                      close_curtain();
+                      break;
+                    default:
+                      lighton();
+                      break;
+                  }
+                  console.log(e.target.responseText[0]-48);
+                  console.log(e.target.responseText[0]);
+                  console.log("Server returned: ");
+              }
+          };
+          var fd=new FormData();
+          fd.append("audio_data",blob, 'audi');
+          xhr.open("POST","http://127.0.0.1:5000/unencrypted",true);
+          xhr.send(fd);
+    
+
+}
+  </script>
+</body>
+</html>
+
+
