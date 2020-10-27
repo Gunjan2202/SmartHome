@@ -1,2 +1,2 @@
 # SmartHome
-A smart home for which your privacy matters the most.
+A smart home device for which your privacy matters the most.
